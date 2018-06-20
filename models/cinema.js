@@ -30,4 +30,11 @@ Cinema.prototype.searchFilmsByYear = function (year) {
   return filmsOfTheYear;
 };
 
+Cinema.prototype.checkByLength = function (time) {
+  const filmsOverLength = this.films.filter((film) => {
+    return (film.length > time)
+  })
+  return filmsOverLength;
+};
+
 module.exports = Cinema;
