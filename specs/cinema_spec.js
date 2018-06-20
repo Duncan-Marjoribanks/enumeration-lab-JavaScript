@@ -50,8 +50,9 @@ describe('Cinema', function () {
     assert.deepStrictEqual(actual, [bladeRunner, blackPanther]);
   });
 
-  xit('should be able to calculate total running time of all films', function () {
-
+  it('should be able to calculate total running time of all films', function () {
+    const actual = cinema.getTotalRuntime();
+    assert.strictEqual(actual, 622)
   });
 
   xit('should be able to filter films by year', function () {
