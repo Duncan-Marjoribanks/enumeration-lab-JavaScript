@@ -35,8 +35,9 @@ describe('Cinema', function () {
     assert.deepEqual(actual, [moonlight, trainspotting]);
   });
 
-  xit('should be able to check whether there are some films from a particular year', function () {
-
+  it('should be able to check whether there are some films from a particular year', function () {
+    const actual = cinema.searchFilmsByYear(2016);
+    assert.deepStrictEqual(actual, [moonlight]);
   });
 
   xit('should be able to check whether there are no films from a particular year', function () {
