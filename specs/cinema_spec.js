@@ -55,8 +55,9 @@ describe('Cinema', function () {
     assert.strictEqual(actual, 622)
   });
 
-  xit('should be able to filter films by year', function () {
-
+  it('should be able to filter films by year', function () {
+    const actual = cinema.getFilmsByYear();
+    assert.deepStrictEqual(actual, { 2016:1, 2017:3, 2018:1 })
   });
 
 });

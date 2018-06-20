@@ -44,6 +44,19 @@ Cinema.prototype.getTotalRuntime = function () {
   return total;
 };
 
+Cinema.prototype.getFilmsByYear = function () {
+  const filmsOfTheYearObject = {};
 
+  const filmsOfTheYear = this.films.filter((film) => {
+    if (filmsOfTheYearObject[film.year]) {
+     filmsOfTheYearObject[film.year] += 1;
+    }
+    else {
+      filmsOfTheYearObject[film.year] = 1;
+    }
+  })
+
+  return filmsOfTheYearObject;
+}
 
 module.exports = Cinema;
